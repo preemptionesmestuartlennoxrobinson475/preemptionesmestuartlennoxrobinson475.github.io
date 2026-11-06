@@ -1,0 +1,69 @@
+---
+import { existsSync } from 'node:fs';
+import Base from '../layouts/Base.astro';
+
+// The CV link only appears once public/cv.pdf exists.
+const hasCV = existsSync('./public/cv.pdf');
+---
+<Base title="Ribhu Hooja">
+  <header class="intro">
+    <img class="photo" src="/photo.jpg" alt="Photo of Ribhu Hooja" width="450" height="600" />
+    <div>
+      <h1>Ribhu Hooja</h1>
+      <p>
+        I am a fourth-year undergraduate math major at Dartmouth College. My research interests are in
+        Floer homology, low-dimensional topology, and spectral geometry. I'm drawn to the idea of using
+        analytic invariants to study the topology and geometry of a space.
+      </p>
+      <p class="links">
+        <a href="mailto:ribhu.hooja.27@dartmouth.edu">ribhu.hooja.27@dartmouth.edu</a><br />
+        {hasCV && <><a href="/cv.pdf">CV</a> · </>}
+        <a href="https://github.com/ribhuhooja">GitHub</a> ·
+        <a href="https://ribhuhooja.xyz">Notes</a>
+        <!-- TODO: LinkedIn -->
+      </p>
+    </div>
+  </header>
+
+  <h2>Research</h2>
+  <ul>
+    <li>
+      <a href="/papers/shur-writeup-provisional.pdf">τ and ϵ invariants of generalized Mazur patterns</a>
+      (in progress)<br />
+      with Sean Kim, Filip Rupchin, Shreya Sinha, and Allison Tsypin
+    </li>
+    <li>
+      <em>Spectral Geometries in Three Dimensions</em>, senior thesis (expository), advised by Craig Sutton.
+      <span class="todo">TODO: PDF</span>
+    </li>
+  </ul>
+
+  <h2>Writing</h2>
+  <ul>
+    <li>The Lefschetz fixed-point theorem: notes for the graduate seminar on the Weil conjectures, January 2026. <span class="todo">TODO: PDF</span></li>
+    <li>Tangents, cotangents, derivations and differentials: expository worksheet with solutions, Math 121. <span class="todo">TODO: PDFs</span></li>
+    <li>Milnor's exotic 7-spheres: term paper, in progress. <span class="todo">TODO: add when done</span></li>
+  </ul>
+
+  <h2>Talks</h2>
+  <ul>
+    <li><em>Satellite operations and bordered Heegaard Floer homology</em>. Dartmouth Topology Seminar, September 24, 2026.</li>
+    <li><em>Sunada's method: using group theory to construct isospectral drums</em>. HRUMC, April 25, 2026.</li>
+  </ul>
+
+  <h2>Code</h2>
+  <p class="todo">TODO: SHUR immersed-curves computation code (GitHub link).</p>
+</Base>
+
+<style>
+  .intro { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .photo { width: 160px; height: auto; border-radius: 4px; flex-shrink: 0; }
+  .intro h1 { margin-top: 0; }
+  .links { line-height: 1.8; }
+  .todo { color: #b00; font-size: 0.9em; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.6rem; }
+  @media (max-width: 560px) {
+    .intro { flex-direction: column; }
+  }
+</style>

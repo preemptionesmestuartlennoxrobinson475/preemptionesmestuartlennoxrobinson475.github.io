@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+
+# Private planning notes, not for the public repo
+WEBSITE_BRIEF.md

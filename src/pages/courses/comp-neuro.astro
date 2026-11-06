@@ -1,0 +1,12 @@
+---
+// Unlisted series index for the class: not linked anywhere, noindex, kept out of the sitemap.
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('posts', (p) => p.data.series === 'comp-neuro' && !p.data.draft))
+  .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+---
+<Base title="Computational Neuroscience, Fall 2026" noindex>
+  <h1>Computational Neuroscience, Fall 2026</h1>
+  <p>Posts written for the course.</p>
+  <ol>{posts.map((p) => <li><a href={`/posts/${p.id}/`}>{p.data.title}</a></li>)}</ol>
+</Base>
