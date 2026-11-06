@@ -4,6 +4,9 @@ import Base from '../layouts/Base.astro';
 
 // The CV link only appears once public/cv.pdf exists.
 const hasCV = existsSync('./public/cv.pdf');
+
+// Not on the page yet, add when ready: senior thesis, exotic 7-spheres paper, SHUR code,
+// Math 72 Lie algebras paper + slides (PDFs already in public/papers/).
 ---
 <Base title="Ribhu Hooja">
   <header class="intro">
@@ -18,41 +21,31 @@ const hasCV = existsSync('./public/cv.pdf');
       <p class="links">
         <a href="mailto:ribhu.hooja.27@dartmouth.edu">ribhu.hooja.27@dartmouth.edu</a><br />
         {hasCV && <><a href="/cv.pdf">CV</a> · </>}
-        <a href="https://github.com/ribhuhooja">GitHub</a> ·
-        <a href="https://ribhuhooja.xyz">Notes</a>
-        <!-- TODO: LinkedIn -->
+        <a href="https://github.com/ribhuhooja">GitHub</a>
       </p>
+      <p><a href="https://ribhuhooja.xyz">Blog</a> - Some informal math writings</p>
     </div>
   </header>
 
   <h2>Research</h2>
   <ul>
     <li>
-      <a href="/papers/shur-writeup-provisional.pdf">τ and ϵ invariants of generalized Mazur patterns</a>
-      (in progress)<br />
+      <a href="/papers/shur-writeup-provisional.pdf">τ and ϵ invariants of generalized Mazur patterns</a> (in progress)<br />
       with Sean Kim, Filip Rupchin, Shreya Sinha, and Allison Tsypin
-    </li>
-    <li>
-      <em>Spectral Geometries in Three Dimensions</em>, senior thesis (expository), advised by Craig Sutton.
-      <span class="todo">TODO: PDF</span>
     </li>
   </ul>
 
   <h2>Writing</h2>
   <ul>
-    <li>The Lefschetz fixed-point theorem: notes for the graduate seminar on the Weil conjectures, January 2026. <span class="todo">TODO: PDF</span></li>
-    <li>Tangents, cotangents, derivations and differentials: expository worksheet with solutions, Math 121. <span class="todo">TODO: PDFs</span></li>
-    <li>Milnor's exotic 7-spheres: term paper, in progress. <span class="todo">TODO: add when done</span></li>
+    <li>The Lefschetz fixed-point theorem: notes for the graduate seminar on the Weil conjectures, January 2026. (<a href="/papers/lefschetz-fixed-point-talk.pdf">Notes</a>)</li>
+    <li>Tangents, cotangents, derivations and differentials: expository worksheet, Math 121. (<a href="/papers/m121-generic-smoothness-worksheet.pdf">Worksheet</a>, <a href="/papers/m121-generic-smoothness-solutions.pdf">Solutions</a>)</li>
   </ul>
 
   <h2>Talks</h2>
   <ul>
     <li><em>Satellite operations and bordered Heegaard Floer homology</em>. Dartmouth Topology Seminar, September 24, 2026.</li>
-    <li><em>Sunada's method: using group theory to construct isospectral drums</em>. HRUMC, April 25, 2026.</li>
+    <li><em>Sunada's method: using group theory to construct isospectral drums</em>. HRUMC, April 25, 2026. (<a href="/papers/HRUMC_Sunadas_Method_slides.pdf">Slides</a>)</li>
   </ul>
-
-  <h2>Code</h2>
-  <p class="todo">TODO: SHUR immersed-curves computation code (GitHub link).</p>
 </Base>
 
 <style>
@@ -60,7 +53,6 @@ const hasCV = existsSync('./public/cv.pdf');
   .photo { width: 160px; height: auto; border-radius: 4px; flex-shrink: 0; }
   .intro h1 { margin-top: 0; }
   .links { line-height: 1.8; }
-  .todo { color: #b00; font-size: 0.9em; }
   ul { padding-left: 1.2rem; }
   li { margin-bottom: 0.6rem; }
   @media (max-width: 560px) {
